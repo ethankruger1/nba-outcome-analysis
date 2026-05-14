@@ -1,31 +1,27 @@
 # NBA Game Outcome Analysis
 
-Predicting NBA game outcomes using team performance data pulled directly from the NBA API across 5 seasons (2021–22 through 2025–26).
+DS 150 Capstone — Spring 2026
 
-## Dataset
+Analyzing whether home court advantage, rest days, and 
+star player availability predict NBA game outcomes 
+across 5 seasons (2021-22 to 2025-26).
 
-- **Source:** NBA API (`nba_api` Python package)
-- **Files:** `data/all_games.csv`, `data/standings.csv`
-- **Rows:** 12,300 game logs across all 30 teams
-- **Key columns:** `WL`, `PTS`, `FG_PCT`, `FG3_PCT`, `REB`, `AST`, `TOV`, `PLUS_MINUS`, `SEASON`
+## Findings
+- Home teams win 55.3% vs 44.7% away (10.6 point gap)
+- Back-to-back games win 44.7% vs 52.6% rested (7.9 point gap)  
+- Wolves win 69.7% with Gobert vs 50.0% without (19.7 point swing)
+- Mavericks compounding effect: 62.1% best case vs 28.6% worst case
 
-## How to Run
+## Stack
+Python, Pandas, Matplotlib, nba_api
 
-1. Clone this repository
-2. Install dependencies: `pip install nba_api pandas matplotlib seaborn scikit-learn`
-3. Open `nba_analysis.ipynb` in Jupyter or VS Code
-4. Run all cells from top to bottom
+## Files
+- nba_analysis.ipynb — main notebook
+- data/ — raw and cleaned CSVs
+- visualizations/ — final charts
 
-## Approach
-
-- Pull game logs and standings data via NBA API
-- Clean and explore the dataset (shape, nulls, dtypes)
-- Analyze team performance trends across all 30 teams
-- Case study: Minnesota Timberwolves deep dive
-- Build a model to predict game outcomes (W/L)
-
-## Key Questions
-
-- Which stats best predict whether a team wins?
-- How does the Timberwolves' performance compare league-wide?
-- What patterns emerge across 5 seasons of game data?
+## How to run
+1. Clone repo
+2. pip install nba_api pandas matplotlib  
+3. Open nba_analysis.ipynb in VS Code or Jupyter
+4. Run all cells top to bottom
